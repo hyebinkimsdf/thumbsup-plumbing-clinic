@@ -1,7 +1,11 @@
+import { Nav } from "../components/Nav";
+
 export function Home() {
   return (
     <>
-      <header role="banner"></header>
+      <header role="banner">
+        <Nav />
+      </header>
       <main id="main-content" role="main">
         <section className="content-section">
           <h2 className="section-title"></h2>
