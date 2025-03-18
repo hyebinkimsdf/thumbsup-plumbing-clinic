@@ -8,6 +8,7 @@ import { ProcessPage } from "./pages/ProcessPage";
 import { GalleryPage } from "./pages/GalleryPage";
 import { Nav } from "./components/Nav";
 import { Bnb } from "./components/Bnb";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/process" element={<ProcessPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <footer role="contentinfo">
         <Bnb />

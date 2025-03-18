@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Bnb } from "../components/Bnb";
-import { ButtonDefalt } from "../components/ButtonDefalt";
+import { ButtonDefault } from "../components/ButtonDefault";
 import { Nav } from "../components/Nav";
 
 export function HomePage() {
@@ -27,7 +27,7 @@ export function HomePage() {
                 <br /> 최상의 서비스로 해결해 드리겠습니다.
               </p>
               <a href="tel:01049602002">
-                <ButtonDefalt />
+                <ButtonDefault text="문의하기" />
               </a>
             </figcaption>
           </figure>
