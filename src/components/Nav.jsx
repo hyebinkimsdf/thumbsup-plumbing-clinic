@@ -19,7 +19,7 @@ export function Nav() {
 
   return (
     <>
-      <nav aria-label="주요 메뉴" role="navigation" className="flex gap-2 w-full max-w-[1200px] h-16 px-4 mx-auto mb-24 items-end justify-between">
+      <nav aria-label="주요 메뉴" role="navigation" className="flex gap-2 w-full max-w-[1200px] h-16 px-4 mx-auto mb-4 items-end justify-between">
         {/* 회사명 - 모바일에서 메뉴 열리면 숨김 */}
         <Link to={"/"} className={isMenuOpen ? "md:block hidden" : ""}>
           <p className="text-3xl font-semibold">엄지척배관클리닉</p>
@@ -67,7 +67,7 @@ export function Nav() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div id="mobile-menu" className="md:hidden w-full bg-white shadow-md py-10">
+        <div id="mobile-menu" className="md:hidden w-full bg-white shadow-md pb-10">
           <ul className="flex flex-col items-center gap-4">
             <li className="nav-item py-2">
               <NavLink to="/" className={isActive("/") ? activeClassName : ""} onClick={toggleMenu} end>
