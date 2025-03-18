@@ -1,11 +1,11 @@
 // App.jsx 또는 App.tsx
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { Machines } from "./pages/Machines";
-import { Services } from "./pages/Services";
-import { Process } from "./pages/Process";
-import { Gallery } from "./pages/Gallery";
+import { HomePage } from "./pages/HomePage";
+import { MachinesPage } from "./pages/MachinesPage";
+import { ServicesPage } from "./pages/ServicesPage";
+import { ProcessPage } from "./pages/ProcessPage";
+import { GalleryPage } from "./pages/GalleryPage";
 import { Nav } from "./components/Nav";
 import { Bnb } from "./components/Bnb";
 
@@ -16,11 +16,11 @@ function App() {
         <Nav />
       </header>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/machines" element={<Machines />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/process" element={<Process />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/machines" element={<MachinesPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/process" element={<ProcessPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
       </Routes>
       <footer role="contentinfo">
         <Bnb />

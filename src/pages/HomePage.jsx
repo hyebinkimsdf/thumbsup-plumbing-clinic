@@ -3,7 +3,7 @@ import { Bnb } from "../components/Bnb";
 import { ButtonDefalt } from "../components/ButtonDefalt";
 import { Nav } from "../components/Nav";
 
-export function Home() {
+export function HomePage() {
   return (
     <div className="mx-4">
       <main id="main-content" role="main">
