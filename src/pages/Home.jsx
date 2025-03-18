@@ -8,7 +8,7 @@ export function Home() {
     <div className="mx-4">
       <main id="main-content" role="main">
         <section className="content-section w-full mt-[110px] mb-14 ">
-          <figure className="flex flex-wrap max-w-[1200px] gap-32 mx-auto  justify-center items-start">
+          <figure className="flex flex-wrap max-w-[1200px] gap-5 mx-auto  justify-between items-start">
             <img className="bg-black w-full max-w-[586px] h-auto rounded-xl" src="/images/mpImage01.png" alt="화장실에서 문제를 분석하고 있는 배수구 전문가" />
 
             <figcaption className="max-w-353px ">
