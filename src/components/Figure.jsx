@@ -6,6 +6,7 @@ export function Figure({
   imageAlt = "서비스내용",
   alignment = "start", // 'start', 'center', 'end' 중 하나 선택
   direction = "row", // 'row', 'column', 'row-reverse', 'column-reverse' 중 하나 선택
+  textAlignment = "left", // 'left', 'center', 'right' 중 하나 선택
 }) {
   // alignment 프롭에 따라 적절한 justify 클래스 설정
   const getJustifyClass = () => {
@@ -37,18 +38,24 @@ export function Figure({
     }
   };
 
-  // 텍스트 정렬 클래스 설정 (row일 때는 왼쪽, column일 때는 중앙)
+  // 텍스트 정렬 클래스 설정
   const getTextAlignClass = () => {
-    if (direction === "column" || direction === "column-reverse") {
-      return "text-center";
+    switch (textAlignment) {
+      case "left":
+        return direction === "column" || direction === "column-reverse" ? "text-left" : "text-center md:text-left";
+      case "center":
+        return "text-center";
+      case "right":
+        return direction === "column" || direction === "column-reverse" ? "text-right" : "text-center md:text-right";
+      default:
+        return direction === "column" || direction === "column-reverse" ? "text-center" : "text-center md:text-left";
     }
-    return "text-center md:text-left";
   };
 
   return (
     <>
-      <figure className={`flex ${getDirectionClass()} ${getJustifyClass()} max-w-[1200px] mx-auto gap-6 mb-16 items-center md:items-end px-4`}>
-        <img className="w-[80%] md:w-[40%] h-auto" src={imageSrc} alt={imageAlt} />
+      <figure className={`flex ${getDirectionClass()} ${getJustifyClass()} max-w-[1200px] w-full mx-auto gap-6 mb-16 items-center md:items-end px-4`}>
+        <img className="max-w-[588px] w-full h-auto" src={imageSrc} alt={imageAlt} />
         <figcaption className={`flex flex-col w-full md:w-[50%] gap-3 ${getTextAlignClass()}`}>
           <p className="category-title text-sm text-[#18A3FA] font-medium">{categoryTitle}</p>
           <p className="content-title text-2xl font-bold">{contentTitle}</p>
