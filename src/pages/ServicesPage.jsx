@@ -1,3 +1,4 @@
+import { Ask } from "../components/Ask";
 import { Figure } from "../components/Figure";
 
 export function ServicesPage() {
@@ -42,6 +43,7 @@ export function ServicesPage() {
         direction="row-reverse"
         textAlignment="right"
       />
+      <Ask />
     </div>
   );
 }
