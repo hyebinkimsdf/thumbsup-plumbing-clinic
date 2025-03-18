@@ -1,23 +1,30 @@
+import { Link } from "react-router-dom";
+
 export function Nav() {
   return (
     <>
-      <nav
-        aria-label="주요 메뉴"
-        role="navigation"
-        className="flex gap-10 w-100vw max-w-[1440px] h-20 bg-slate-500 mx-auto items-end justify-center"
-      >
-        <ul className="nav-list flex gap-10">
+      <nav aria-label="주요 메뉴" role="navigation" className="flex gap-10 w-100% max-w-[1200px] h-16 px-4  mx-auto items-end  justify-between ">
+        <Link to={"/"}>
+          <p className="text-3xl font-semibold">엄지척배관클리닉</p>
+        </Link>
+
+        <ul className="nav-list flex gap-10 items-center">
           <li className="nav-item">
-            <a href="#" className="flex">
-              {/* <img src="/icons/icon-menu.svg" alt="메뉴1" /> */}
-              <span>메뉴1</span>
-            </a>
+            <li className="nav-item  active:border-b-2 active:border-[#18A3FA] active:font-semibold active:text-[#18A3FA] ">
+              <Link to={"/"}>회사소개</Link>
+            </li>
           </li>
           <li className="nav-item">
-            <a href="#">메뉴2</a>
+            <Link to={"/machines"}>장비소개</Link>
           </li>
           <li className="nav-item">
-            <a href="#">메뉴3</a>
+            <Link to={"/services"}>서비스품목</Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/process"}>서비스절차</Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/gallery"}>영상&사진</Link>
           </li>
         </ul>
       </nav>
