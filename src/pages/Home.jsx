@@ -5,14 +5,13 @@ import { Nav } from "../components/Nav";
 
 export function Home() {
   return (
-    <div>
+    <div className="mx-4">
       <main id="main-content" role="main">
-        <section className="content-section mt-[110px] mb-14">
-          <figure className="flex gap-32 mx-auto  justify-center items-start">
-            {/* Todo 이미지 src 연결 */}
-            <img className="bg-black w-[586px] h-[390px] rounded-xl" src="/images/mpImage01.png" alt="화장실에서 문제를 분석하고 있는 배수구 전문가" />
+        <section className="content-section w-full mt-[110px] mb-14 ">
+          <figure className="flex flex-wrap max-w-[1200px] gap-32 mx-auto  justify-center items-start">
+            <img className="bg-black w-full max-w-[586px] h-auto rounded-xl" src="/images/mpImage01.png" alt="화장실에서 문제를 분석하고 있는 배수구 전문가" />
 
-            <figcaption className="max-w-353px">
+            <figcaption className="max-w-353px ">
               <h2 className="section-title text-[24px] font-semibold">
                 안녕하세요!
                 <br />
@@ -33,10 +32,9 @@ export function Home() {
             </figcaption>
           </figure>
         </section>
-        {/* <article className="content-aricle">
-          <h2 className="aricle-title"></h2>
-        </article> */}
-        <section className="content-section flex gap-6 mx-auto w-full max-w-[1200px] justify-center border-t-2 py-16 ">
+
+        {/*  */}
+        <section className="content-section flex flex-wrap gap-6 mx-auto w-full max-w-[1200px] justify-center border-t-2 py-16 ">
           <img className="w-[282px] h-[282px]" src="/images/imgListItem01.png" alt="막힌 하수구에 카메라를 넣고 있는 전문가" />
           <img className="w-[282px] h-[282px]" src="/images/imgListItem02.png" alt="화장실 하수구를 뚫고 있는 상황" />
           <img className="w-[282px] h-[282px]" src="/images/imgListItem03.png" alt="전문 기계" />
