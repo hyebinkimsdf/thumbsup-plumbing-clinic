@@ -9,6 +9,7 @@ import { GalleryPage } from "./pages/GalleryPage";
 import { Nav } from "./components/Nav";
 import { Bnb } from "./components/Bnb";
 import { NotFoundPage } from "./pages/NotFoundPage";
+import { ButtonResetScroll } from "./components/ButtonResetScroll";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <ButtonResetScroll />
       <footer role="contentinfo">
         <Bnb />
       </footer>
