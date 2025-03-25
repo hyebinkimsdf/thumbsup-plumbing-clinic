@@ -10,6 +10,7 @@ import { Nav } from "./components/Nav";
 import { Bnb } from "./components/Bnb";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { ButtonResetScroll } from "./components/ButtonResetScroll";
+import { CallRedirect } from "./pages/CallRedirect";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/process" element={<ProcessPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/call" element={<CallRedirect />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <ButtonResetScroll />

@@ -26,9 +26,9 @@ export function HomePage() {
                 도움이 필요하실 떄 언제든지 전화주세요!
                 <br /> 최상의 서비스로 해결해 드리겠습니다.
               </p>
-              <a href="tel:01049602002">
+              <Link to="/call">
                 <ButtonDefault text="문의하기" />
-              </a>
+              </Link>
             </figcaption>
           </figure>
         </section>
