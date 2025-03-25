@@ -13,9 +13,6 @@ export function Ask() {
       {/* 숨겨진 input 필드 추가 */}
       <input type="text" id="copyNumber" value="010-4960-2002" readOnly className="absolute opacity-0" />
 
-      {/* <a href="tel:010-4960-2002" onClick={copy} tabIndex="-1">
-        <ButtonDefault text="문의하기" />
-      </a> */}
       <Link to="/call" onClick={copy} tabIndex="-1">
         <ButtonDefault text="문의하기" />
       </Link>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Bnb } from "../components/Bnb";
+
 import { ButtonDefault } from "../components/ButtonDefault";
-import { Nav } from "../components/Nav";
+import { copy } from "../hook/copy";
 
 export function HomePage() {
   return (
@@ -26,18 +26,18 @@ export function HomePage() {
                 도움이 필요하실 떄 언제든지 전화주세요!
                 <br /> 최상의 서비스로 해결해 드리겠습니다.
               </p>
-              <Link to="/call">
+              <Link to="/call" onClick={copy} tabIndex="-1">
                 <ButtonDefault text="문의하기" />
               </Link>
             </figcaption>
           </figure>
         </section>
 
-        <section className="content-section flex flex-wrap gap-6 mx-auto w-full max-w-[1200px] justify-center border-t-2 py-16">
-          <img className="w-[282px] h-[282px] sm:w-[200px] sm:h-[200px]" src="/images/imgListItem01.png" alt="막힌 하수구에 카메라를 넣고 있는 전문가" />
-          <img className="w-[282px] h-[282px] sm:w-[200px] sm:h-[200px]" src="/images/imgListItem02.png" alt="화장실 하수구를 뚫고 있는 상황" />
-          <img className="w-[282px] h-[282px] sm:w-[200px] sm:h-[200px]" src="/images/imgListItem03.png" alt="전문 기계" />
-          <img className="w-[282px] h-[282px] sm:w-[200px] sm:h-[200px]" src="/images/imgListItem04.png" alt="막힌 하수구에 전문기계를 사용하고 있는 전문가" />
+        <section className="content-section flex flex-wrap  gap-6 mx-auto w-full max-w-[1200px] justify-center border-t-2 py-16">
+          <img className="w-full  max-w-[282px] max-h-[282px]  rounded-xl" src="/images/imgListItem01.png" alt="막힌 하수구에 카메라를 넣고 있는 전문가" />
+          <img className="w-full max-w-[282px] max-h-[282px]  rounded-xl" src="/images/imgListItem02.png" alt="화장실 하수구를 뚫고 있는 상황" />
+          <img className="w-full max-w-[282px] max-h-[282px]  rounded-xl" src="/images/imgListItem03.png" alt="전문 기계" />
+          <img className="w-full max-w-[282px] max-h-[282px]  rounded-xl" src="/images/imgListItem04.png" alt="막힌 하수구에 전문기계를 사용하고 있는 전문가" />
         </section>
       </main>
     </div>
