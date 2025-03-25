@@ -14,7 +14,7 @@ export function ServicesPage() {
             contentTitle="준설 작업"
             contentDescription="고압 세척 및 진공 흡입 장비를 이용하여 배수관 내부의 오염물질(기름, 찌꺼기, 토사 등)을 제거하여 막힘을 예방하고 원활한 배수를 유지합니다.정기적인 준설 작업을 통해 악취를 줄이고, 배수 시스템의 수명을 연장할 수 있습니다."
             imageSrc="./images/servicePage/pipeDesalting.png"
-            imageAlt="변기 교체 서비스"
+            imageAlt="준설 작업 진행 과정"
             alignment="end"
             direction="row-reverse"
             textAlignment="right"

@@ -19,46 +19,50 @@ export function Nav() {
 
   return (
     <>
-      <nav aria-label="주요 메뉴" role="navigation" className="flex gap-2 w-full max-w-[1200px] h-16 px-4 mx-auto mb-24 items-end justify-between">
-        {/* 회사명 - 모바일에서 메뉴 열리면 숨김 */}
-        <Link to={"/"} className={isMenuOpen ? "md:block hidden" : ""}>
+      <nav aria-label="주요 메뉴" role="navigation" className="flex gap-2 w-full max-w-[1200px] h-16 px-4 mx-auto mb-10 md:mb-24 items-end justify-center md:justify-between">
+        {/* 회사명 - 모바일에서 메뉴 열리면 가운데 정렬 */}
+        <Link to={"/"}>
           <p className="text-3xl font-semibold">엄지척배관클리닉</p>
         </Link>
 
-        {/* 모바일에서 메뉴 열렸을 때 빈 공간 채우기 */}
-        {isMenuOpen && <div className="md:hidden"></div>}
-
         {/* Mobile menu button */}
-        <button className="md:hidden flex flex-col justify-center items-center" onClick={toggleMenu} aria-expanded={isMenuOpen} aria-controls="mobile-menu" aria-label="메뉴 열기">
+        <button
+          className="md:hidden flex flex-col fixed right-8 top-10
+        "
+          onClick={toggleMenu}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
+          aria-label="메뉴 열기"
+        >
           <span className="block w-6 h-0.5 bg-black mb-1"></span>
           <span className="block w-6 h-0.5 bg-black mb-1"></span>
           <span className="block w-6 h-0.5 bg-black"></span>
         </button>
 
         {/* Desktop menu */}
-        <ul className="nav-list hidden md:flex gap-10 items-center">
+        <ul className="nav-list hidden md:flex gap-10 items-center ">
           <li className="nav-item">
-            <NavLink to="/" className={isActive("/") ? activeClassName : ""} end>
+            <NavLink to="/" className="" end>
               회사소개
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/machines" className={isActive("/machines") ? activeClassName : ""}>
+            <NavLink to="/machines" className="">
               장비소개
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/services" className={isActive("/services") ? activeClassName : ""}>
+            <NavLink to="/services" className="">
               서비스품목
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/process" className={isActive("/process") ? activeClassName : ""}>
+            <NavLink to="/process" className="">
               서비스절차
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/gallery" className={isActive("/gallery") ? activeClassName : ""}>
+            <NavLink to="/gallery" className="">
               영상&사진
             </NavLink>
           </li>
@@ -70,27 +74,27 @@ export function Nav() {
         <div id="mobile-menu" className="md:hidden w-full bg-white shadow-md pb-10">
           <ul className="flex flex-col items-center gap-4">
             <li className="nav-item py-2">
-              <NavLink to="/" className={isActive("/") ? activeClassName : ""} onClick={toggleMenu} end>
+              <NavLink to="/" className="" onClick={toggleMenu} end>
                 회사소개
               </NavLink>
             </li>
             <li className="nav-item py-2">
-              <NavLink to="/machines" className={isActive("/machines") ? activeClassName : ""} onClick={toggleMenu}>
+              <NavLink to="/machines" className="" onClick={toggleMenu}>
                 장비소개
               </NavLink>
             </li>
             <li className="nav-item py-2">
-              <NavLink to="/services" className={isActive("/services") ? activeClassName : ""} onClick={toggleMenu}>
+              <NavLink to="/services" className="" onClick={toggleMenu}>
                 서비스품목
               </NavLink>
             </li>
             <li className="nav-item py-2">
-              <NavLink to="/process" className={isActive("/process") ? activeClassName : ""} onClick={toggleMenu}>
+              <NavLink to="/process" className="" onClick={toggleMenu}>
                 서비스절차
               </NavLink>
             </li>
             <li className="nav-item py-2">
-              <NavLink to="/gallery" className={isActive("/gallery") ? activeClassName : ""} onClick={toggleMenu}>
+              <NavLink to="/gallery" className="" onClick={toggleMenu}>
                 영상&사진
               </NavLink>
             </li>
