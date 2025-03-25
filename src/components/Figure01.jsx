@@ -57,10 +57,10 @@ export function Figure01({
     <>
       <figure className={`flex ${getDirectionClass()} ${getJustifyClass()} max-w-[1200px] w-full mx-auto gap-6 mb-16 items-center md:items-end px-4`} id={id}>
         <img className="max-w-[588px] w-full h-auto" src={imageSrc} alt={imageAlt} />
-        <figcaption className={`flex flex-col w-full md:w-[50%] gap-3 ${getTextAlignClass()}`}>
+        <figcaption className={`flex flex-col w-full md:w-[50%] text-subtitle gap-3 ${getTextAlignClass()}`}>
           <p className="category-title text-sm text-[#18A3FA] font-medium">{categoryTitle}</p>
           <p className="content-title text-2xl font-bold">{contentTitle}</p>
-          <p className="content-sub">{contentDescription}</p>
+          <p className="content-sub font-light">{contentDescription}</p>
         </figcaption>
       </figure>
     </>

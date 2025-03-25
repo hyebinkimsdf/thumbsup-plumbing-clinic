@@ -18,7 +18,7 @@ export function HomePage() {
                 24시간 송파구 문정동 배관 전문 서비스
               </h2>
               <br />
-              <p className="text-[16px] sm:text-[18px] font-medium">
+              <p className="text-[16px] sm:text-[18px] font-light text-subtitle">
                 싱크대 · 하수구 · 변기 막힘
                 <br /> 고압세척 · 관로탐지 · 배관 내시경
                 <br /> 배관 문제, 빠르고 확실하게 해결해 드립니다! <br />
