@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { ButtonDefault } from "./ButtonDefault";
+import { copy } from "../hook/copy";
 
 export function Ask() {
   return (
@@ -8,8 +10,10 @@ export function Ask() {
         <p className="font-light">저희 엄지척배관클리닉은 24시간 신속 대응으로 하수구 막힘을 완벽하게 해결해드립니다.</p>
         <p className="font-light">언제든지 편하게 문의해 주세요!</p>
       </div>
+      {/* 숨겨진 input 필드 추가 */}
+      <input type="text" id="copyNumber" value="010-4960-2002" readOnly className="absolute opacity-0" />
 
-      <a href="tel:01049602002">
+      <a href="tel:010-4960-2002" onClick={copy} tabIndex="-1">
         <ButtonDefault text="문의하기" />
       </a>
     </div>
