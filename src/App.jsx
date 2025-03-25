@@ -11,10 +11,12 @@ import { Bnb } from "./components/Bnb";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { ButtonResetScroll } from "./components/ButtonResetScroll";
 import { CallRedirect } from "./pages/CallRedirect";
+import ScrollToTop from "./hook/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <header role="banner" className="mx-auto">
         <Nav />
       </header>

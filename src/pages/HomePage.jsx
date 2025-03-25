@@ -33,11 +33,20 @@ export function HomePage() {
           </figure>
         </section>
 
-        <section className="content-section flex flex-wrap  gap-6 mx-auto w-full max-w-[1200px] justify-center border-t-2 py-16">
-          <img className="w-full  max-w-[282px] max-h-[282px]  rounded-xl" src="/images/imgListItem01.png" alt="막힌 하수구에 카메라를 넣고 있는 전문가" />
-          <img className="w-full max-w-[282px] max-h-[282px]  rounded-xl" src="/images/imgListItem02.png" alt="화장실 하수구를 뚫고 있는 상황" />
-          <img className="w-full max-w-[282px] max-h-[282px]  rounded-xl" src="/images/imgListItem03.png" alt="전문 기계" />
-          <img className="w-full max-w-[282px] max-h-[282px]  rounded-xl" src="/images/imgListItem04.png" alt="막힌 하수구에 전문기계를 사용하고 있는 전문가" />
+        <section className="content-section flex flex-wrap gap-6 mx-auto w-full max-w-[1200px] justify-center border-t-2 py-16">
+          {[
+            { src: "/images/imgListItem01.png", alt: "막힌 하수구에 카메라를 넣고 있는 전문가", text: "하수구 막힘" },
+            { src: "/images/imgListItem02.png", alt: "화장실 하수구를 뚫고 있는 상황", text: "화장실 막힘" },
+            { src: "/images/imgListItem03.png", alt: "전문 기계", text: "준설 작업" },
+            { src: "/images/imgListItem04.png", alt: "막힌 하수구에 전문기계를 사용하고 있는 전문가", text: "빌라 공동배관막힘" },
+          ].map((item, index) => (
+            <div key={index} className="relative w-full max-w-[282px] max-h-[282px] rounded-xl overflow-hidden group">
+              <img className="w-full h-full object-cover rounded-xl" src={item.src} alt={item.alt} />
+              <div className="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white text-lg font-semibold">{item.text}</p>
+              </div>
+            </div>
+          ))}
         </section>
       </main>
     </div>
