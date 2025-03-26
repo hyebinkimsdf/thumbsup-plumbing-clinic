@@ -1,4 +1,4 @@
-export function copy() {
+export function Copy() {
   const copyNumber = document.querySelector("#copyNumber");
 
   copyNumber.select();

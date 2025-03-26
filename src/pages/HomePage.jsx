@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-
 import { ButtonDefault } from "../components/ButtonDefault";
-import { copy } from "../hook/copy";
+import { Copy } from "../hook/Copy";
 
 export function HomePage() {
   return (
@@ -26,7 +25,11 @@ export function HomePage() {
                 도움이 필요하실 떄 언제든지 전화주세요!
                 <br /> 최상의 서비스로 해결해 드리겠습니다.
               </p>
-              <Link to="/call" onClick={copy} tabIndex="-1">
+
+              {/* 숨겨진 input 필드 추가 */}
+              <input type="text" id="copyNumber" value="010-4960-2002" readOnly className="absolute opacity-0" />
+
+              <Link to="/call" onClick={Copy} tabIndex="-1">
                 <ButtonDefault text="문의하기" />
               </Link>
             </figcaption>
