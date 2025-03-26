@@ -10,10 +10,13 @@ import { Nav } from "./components/Nav";
 import { Bnb } from "./components/Bnb";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { ButtonResetScroll } from "./components/ButtonResetScroll";
+import { CallRedirect } from "./pages/CallRedirect";
+import ScrollToTop from "./hook/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <header role="banner" className="mx-auto">
         <Nav />
       </header>
@@ -23,6 +26,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/process" element={<ProcessPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/call" element={<CallRedirect />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <ButtonResetScroll />
