@@ -5,13 +5,13 @@ import { copy } from "../hook/copy";
 
 export function HomePage() {
   return (
-    <div className="mx-4">
+    <div className="mx-4 mt-32">
       <main id="main-content" role="main">
         <section className="content-section w-full mt-[110px] mb-14">
           <figure className="flex flex-wrap justify-center items-center gap-20  mx-auto max-w-[1200px]">
             <img className="bg-black w-full sm:max-w-[586px] h-auto rounded-xl" src="/images/mpImage01.png" alt="화장실에서 문제를 분석하고 있는 배수구 전문가" />
 
-            <figcaption className="max-w-[353px] w-full">
+            <figcaption className="max-w-[380px] w-full">
               <h2 className="section-title text-[24px] sm:text-[28px] font-semibold">
                 안녕하세요!
                 <br />

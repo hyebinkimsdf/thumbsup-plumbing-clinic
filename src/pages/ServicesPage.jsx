@@ -6,7 +6,7 @@ export function ServicesPage() {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const naverPlaceUrl = isMobile ? "https://m.place.naver.com/place/1707559589/home" : "https://naver.me/5iTkC83d";
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 mt-32">
       <Link to={naverPlaceUrl} target="_blank" rel="noopener noreferrer">
         <section id="desalting">
           <Figure01

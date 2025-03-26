@@ -4,8 +4,8 @@ import { Ask } from "../components/Ask";
 
 export function GalleryPage() {
   return (
-    <div className="mx-4">
-      <div className="mb-14">
+    <div className="mx-4 ">
+      <div className="mb-14 mt-32">
         <h1 className="mt-24 text-center flex justify-center items-center text-2xl md:text-4xl font-semibold">실제 사례를 확인하세요!</h1>
         <p className="flex text-center justify-center md:text-base text-sm mt-8 text-subtitle">깨끗하고 안전한 배관 관리, 엄지척이 직접 보여드립니다!</p>
       </div>

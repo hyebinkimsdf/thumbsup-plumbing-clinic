@@ -17,7 +17,7 @@ export function ProcessPage() {
   }, []);
 
   return (
-    <div className="mx-4">
+    <div className="mx-4 mt-32">
       <div className="mb-14">
         <h1 className="mt-24 text-center flex justify-center items-center text-2xl md:text-4xl font-semibold">작업 진행 절차</h1>
         <p className="flex text-center justify-center md:text-base text-sm  text-subtitle mt-8">엄지척배관클리닉은 신속하고 체계적인 절차로 배관 문제를 해결합니다.</p>
